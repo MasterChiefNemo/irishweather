@@ -1,0 +1,221 @@
+body{
+    background-color: gray;
+}
+
+.top-container{
+    display: grid;
+    grid-template-columns: 15% auto 30%;
+    grid-template-rows: auto;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+.img{
+    margin-top: 0.5em;
+    margin-left: 1em;
+}
+
+.date{
+    margin-top: 0.5em;
+    margin-right: 5em;
+}
+
+#time{
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+    text-align: right;
+    margin-top: 1.8em;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 8% 16% 4%;
+    grid-template-rows: auto;
+    margin-top: 0.5em;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    background-color: #232961;
+    max-width: auto;
+}
+
+.link{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #232961;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.h1{
+    margin-top: 0.5em;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    margin-top: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font: bolder;
+    font-size: small;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.main{
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 725px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.mainCompare{
+    resize: horizontal;
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 1210px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.mainLeft{
+    margin-left: 1em;
+    text-align: justify;
+    max-width: auto;
+}
+
+.leftText{
+    font-size: medium;
+    max-width: auto;
+}
+
+.mainCenter{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    font-size: medium;
+    max-width: auto;
+}
+
+.search{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    max-width: auto;
+}
+
+#location{
+    margin-left: 5px;
+    width: 380px;
+    height: 25px;
+    border: none;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.firstoutput{
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 25px;
+    height: 170px;
+    width: 442px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: justify;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+#map{
+    font-family: 'Courier New', Courier, monospace;
+    height: 390px;
+    width: 900px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 6px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.submit{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #232961;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-left: 5px;
+    margin-top: 0.25em;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+#metric, #metA, #imperial, #impA{
+    margin-top: 0.75em;
+}
+
+#imperialA, #metricA, #imperialLabel, #metricLabel{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#locationA, #locationB{
+    width: 250px;
+    height: 25px;
+    border: none;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    margin-left: 5px;
+    max-width: auto;
+}
+
+#graphA, #graphB{
+    margin-top: 10px;
+    margin-left: 5px;
+    border: none;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+    max-width: auto;
+}
+
+.compare{
+    border: none;
+}
+
+.row{
+    max-width: auto;
+    margin-top: 5px;
+    width: 940px;
+    height: 175px;
+    margin-left: 6px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.8);
+}

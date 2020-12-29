@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/jpg" href="img/ait.jpg">
+        <title>Open Weather Map Data</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/mainscript.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
+        <script type="text/javascript" src="js/compare.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpqllrmfMRI9NNKSGcUmnendqeXn1aEXY&callback=initMap"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <div class="img">
+                <a href="https://www.ait.ie/" target="_blank"><img src="img/weather.png" width="80px" height="75px" alt="Weather Logo"></a>
+            </div>
+            <div class="h1">
+                <h1>Open Weather Map Data</h1>
+            </div>
+            <div class="date">
+                <h4 id="time"></h4>
+                <script type="text/javascript" onload="updateTime()" src="js/time.js"></script>
+            </div>
+        </div>
+        <div class="navbar">
+            <form method="get" action="/index.html"><button type="submit" class="link">Home</button></form>
+            <form method="get" action="/comparison.html"><button type="submit" class="link">Compare Locations</button></form>
+            <form method="get" action="/about.html"><button type="submit" class="link">About</button></form>
+        </div>
+        <div class="mainCompare">
+            <div class="mainLeft">
+                <a href="https://openweathermap.org/" target="_blank"><img src="img/open.png" style="margin-top: 0.5em;" width="300px" height="130px" alt="Open Weather Map"></a>
+                <h3><strong>Assingment 2 - Comparing Locations</strong></h3>
+                <p class="leftText">
+                    On this page, a user can compare the weather for 2 locations in Ireland by filling in a town name in 
+                    each search box, then chosing a unit of measurement, imperial or metric.
+                </p>
+                <p class="leftText">
+                    On this page, a graph should also provide a visual for temperatures in each location over the next few
+                    hours throughout the course of the day.
+                </p>
+            </div>
+            <div class="mainCenter">
+                <h2><strong>Open Weather Map</strong></h2>
+                <div class="compare">
+                    <h3><strong>Weather Comparison: Compare Locations</strong></h3>
+                    <form>
+                        <div id="rates">
+                            <input type="text" id="locationA" placeholder="Enter Town or City in Ireland" name="locateA">
+                            <input type="text" id="locationB" placeholder="Enter Town or City in Ireland" name="locateB">
+                            <br>
+                            <input type="radio" id="metA" name="measureA" value="metric">
+                            <strong><label for="metric" id="metricA">Metric</label></strong>
+                            <input type="radio" id="impA" name="measureA" value="imperial">
+                            <strong><label for="imperial" id="imperialA">Imperial</label></strong>
+                        </div>
+                        <button type="button" id="submit" class="submit" onclick="compare()">Submit</button> 
+                    </form>
+                </div>
+                <div id="graphA" style="width: 900px; height: 480px;"></div>
+                <div id="graphB" style="width: 900px; height: 480px;"></div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <strong>Developed by: Damien Hunter B.Eng. Software Engineering 2020/2021</strong>
+    </footer>
+</html>

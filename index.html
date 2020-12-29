@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/jpg" href="img/ait.jpg">
+        <title>Open Weather Map Data</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="js/mainscript.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpqllrmfMRI9NNKSGcUmnendqeXn1aEXY&callback=initMap"></script>
+    </head>
+    <body>
+        <div class="top-container">
+            <div class="img">
+                <a href="https://www.ait.ie/" target="_blank"><img src="img/weather.png" width="80px" height="75px" alt="Weather Logo"></a>
+            </div>
+            <div class="h1">
+                <h1>Open Weather Map Data</h1>
+            </div>
+            <div class="date">
+                <h4 id="time"></h4>
+                <script type="text/javascript" onload="updateTime()" src="js/time.js"></script>
+            </div>
+        </div>
+        <div class="navbar">
+            <form method="get" action="/index.html"><button type="submit" class="link">Home</button></form>
+            <form method="get" action="/comparison.html"><button type="submit" class="link">Compare Locations</button></form>
+            <form method="get" action="/about.html"><button type="submit" class="link">About</button></form>
+        </div>
+        <div class="main">
+            <div class="mainLeft">
+                <a href="https://openweathermap.org/" target="_blank"><img src="img/open.png" style="margin-top: 0.5em;" width="300px" height="130px" alt="Open Weather Map"></a>
+                <h3><strong>Assingment 2 - Gathering Data</strong></h3>
+                <p class="leftText">
+                    Welcome to Assignment 2 for Client Side Technologies. In this project, I will be making use
+                    of HTML, CSS and Javascript to obtain data from Open Weather Map.
+                </p>
+                <p class="leftText">
+                    In the main body, to the right of this text, you will see a text field, radio buttons and a submit 
+                    button near the top of the page. This allows you to search and retrieve weather data for any town 
+                    or city in Ireland. The output is shown to the right of the input box. As for the map, it shows the 
+                    users current location.
+                </p>
+                <p class="leftText">
+                    Why only Ireland? For the purpose of this assignment and time constraints, it is easier to allow a user 
+                    to search only Irish locations and compare weather information. It can be extended to allow for other 
+                    Countries quickly.
+                </p>
+            </div>
+            <div class="mainCenter">
+                <h2><strong>Open Weather Map</strong></h2>
+                <h3><strong>Weather: Search by Location</strong></h3>
+                
+                <div class="search">
+                    <form>
+                        <input type="text" id="location" placeholder="Enter Town or City in Ireland" name="location">
+                        <br>
+                        <input type="radio" id="metric" name="measurement" value="metric">
+                        <label for="metric" id="metricLabel">Metric</label>
+                        <input type="radio" id="imperial" name="measurement" value="imperial">
+                        <label for="imperial" id="imperialLabel">Imperial</label>
+                        <br>
+                        <button type="button" id="submit" class="submit" onclick="alerted()">Submit</button>
+                    </form>
+                    <div class="firstoutput" id="firstoutput" style="font-family: 'Courier New', Courier, monospace; font-size: medium;"></div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <strong>Developed by: Damien Hunter B.Eng. Software Engineering 2020/2021</strong>
+    </footer>
+</html>
