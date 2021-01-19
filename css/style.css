@@ -19,6 +19,12 @@ body{
     margin-right: 5em;
 }
 
+button{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
 #time{
     font-family: 'Courier New', Courier, monospace;
     font: bolder;
